@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(img/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* centralize content in x-axis */
+    justify-content: center; 
+    /* centralize content in y-axis */
+    align-items:center ;
+}
+
+.container{
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4));
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* normal styling of anchor elements of nav*/
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    /* position of parent */
+    position: relative;
+}
+
+/* additional styling of anchor elements of nav prior hover and named as "before" */
+/* before is the default stylng naming convention provided by css */
+/* here the additional styling is bottom underline */
+nav a:before{
+    /* insert an empty string before a element, anything can be inserted to add further styling instead of empty string */
+    /* one way of adding further styling */
+    content: "";
+    width: 0%;
+    border-bottom: 2px solid orange;
+    /* position of child */
+    position: absolute;
+    bottom: 0;
+    display: block;
+}
+
+/* nav ko anchor ko hover paxi ko before */
+/* changes in "before" styling after being hovered upon the anchor elements of nav  */
+nav a:hover:before {
+    width: 80%;
+    transition: 0.4s linear;
+}
+
+.leftSection{
+    max-width: 450px;
+    color: white;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.leftSection h1{
+    font-size: 50px;
+    padding-left: 10px ;
+    border-left: 5px solid orange;
+}
+
+.leftSection p{
+    margin: 20px 0px;
+    font-size: 20px;
+    /* the spaces between words and characters are adjusted to create an even line on both the left and right sides of the paragraph. */
+    text-align: justify;
+}
+
+button{
+    padding: 10px;
+    background: transparent;
+    border: 1px solid orange;
+    outline: none;
+    color: white;
+    border-radius: 8px;
+}
+
+/* elements with id are styled using # */
+#icon{
+  margin-top: 30px;
+}
+
+.rightSection{
+    position: fixed;
+    bottom: 0;
+    right: 100px;
+}
